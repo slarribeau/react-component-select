@@ -32,13 +32,20 @@ const customStyles = {
 
 
 class App extends React.Component  {
+
+    foo(e) {
+        console.log(e.value)
+    }
+  
   render() {  
     return (
-<div id="menu">  
-<Select           defaultValue={options[0]}
- options={options} />
-</div>       
-       )
+        <div id="menu">  
+            <Select           
+                defaultValue={options[0]}
+                onChange={this.foo}
+                options={options} />
+        </div>       
+    )
   }
 }
 
